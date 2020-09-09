@@ -1,0 +1,157 @@
+---
+title: "Donnermeyer_Homework_1"
+author: "Sam Donnermeyer"
+date: "8/27/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Load Packages
+library(tidyverse)
+library(ggplot2)
+library(ggeasy)
+library(scales)
+library(grid)
+library(gridExtra)
+library(patchwork)
+```
+
+
+```{r,include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Hand-In Homework #1
+
+```{r, include=FALSE}
+growth_rates <- read_csv("GrowthRates.csv")
+head(growth_rates, 3)
+```
+
+### Create Histogram and Density Plot
+
+```{r, echo = TRUE}
+## 2a ## 
+# Create Histogram of Rate2015to20
+histogram_plot = ggplot(growth_rates, aes(Rate2015to20)) +
+  geom_histogram(binwidth = 3) + 
+  # Add x label
+  xlab("Estimated Population Growth Rate (%) 2015-20") +
+  # add y label
+  ylab("Count of Nations") +
+  # Add title to the chart
+  ggtitle("Growth Rates During 2015 - 2020") +
+  # Theme
+  scale_colour_viridis_d() +
+  theme(
+    # hide panel borders and remove grid lines
+    panel.background = element_rect(fill = "white"),
+    panel.border = element_blank(), 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    # change axis titles 
+    axis.line = element_line(color = "black"), 
+    axis.title = element_text(size=9),
+    # Change the title orientation 
+    plot.title = element_text(hjust = 0.5)
+  )
+
+# Create Density plot of Rate2015to20
+density_plot = ggplot(growth_rates, aes(Rate2015to20)) + 
+  # Density plot 
+  geom_density(color = "black", fill = "light grey", alpha = .4) +
+  # Add x label 
+  xlab("Estimated Population Growth Rate (%) 2015-20") +
+  # Add y label
+  ylab("Proportion of Nations") +
+  # Add title to the chart
+  ggtitle("Growth Rates During 2015 - 2020") +
+  # Themes
+  scale_colour_viridis_d() + 
+  #theme_minimal() + 
+  # Change the Y-axis to percentage
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
+  # Theme
+  theme(
+    # hide panel borders and remove grid lines
+    panel.background = element_rect(fill = "white"),
+    panel.border = element_blank(), 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    # change axis titles 
+    axis.line = element_line(color = "black"),
+    axis.title = element_text(size=9),
+    # Change the title orientation 
+    plot.title = element_text(hjust = 0.5)
+  )
+
+histogram_plot + density_plot 
+```
+
+The distribution of estimated population growth rate for 235 given countries and territories is mostly unimodal with a large peak around five percent. The growth rates are generally evenly distributed, except for a small increase in nations with about a thirteen percent growth rate increase. There is a single country that resides outside of the distribution at negative fifteen percent. 
+
+The mean of the growth rate is `r mean(growth_rates$Rate2015to20)`, which is the best measure of center in this generally unimodal distribution. The median of the growth rate is `r median(growth_rates$Rate2015to20)`. The IQR of the growth rate distribution is (`r quantile(growth_rates$Rate2015to20, 0.25)`, `r quantile(growth_rates$Rate2015to20, 0.75)`) which reveals the spread of the distribution accurately.
+
+### Create Boxplots by Continent
+
+```{r, echo = TRUE}
+## 2d ##
+# Create side-by-side boxplots of growth rates for the 6 continents 
+boxplot = ggplot(growth_rates, aes(Continent, Rate2015to20)) +
+  geom_boxplot(outlier.colour="black", outlier.shape=16,
+             outlier.size=2, notch=FALSE) +
+  # Add x label 
+  xlab("Continent") +
+  # Add y label
+  ylab("Estimated Population Growth Rate (%) 2015-20") +
+  # Add title to the chart
+  ggtitle("Estimated Growth Rates During 2015 - 2020") +
+  # Themes
+  scale_colour_viridis_d() + 
+  # Theme
+  theme(
+    # hide panel borders and remove grid lines
+    panel.background = element_rect(fill = "white"),
+    panel.border = element_blank(), 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    # change axis titles 
+    axis.line = element_line(color = "black"),
+    axis.title = element_text(size=9),
+    # Change the title orientation 
+    plot.title = element_text(hjust = 0.5)
+  )
+
+boxplot
+```
+
+The continent that tended to have the largest growth rate is Africa and Europe had tended to have the lowest. Africa's estimated growth rates contained a lot of variation and South America had the least variation in the growth rate. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
