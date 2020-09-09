@@ -1,0 +1,116 @@
+---
+title: "Donnermeyer_Homework_2"
+author: "Sam Donnermeyer"
+date: "9/11/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Load Packages
+library(tidyverse)
+library(ggplot2)
+library(ggeasy)
+library(scales)
+library(grid)
+library(gridExtra)
+library(patchwork)
+library(utils)
+
+# Formating numbers made through in-line code
+inline_hook <- function(x) {
+  if (is.numeric(x)) {
+    format(x, digits = 2)
+  } else x
+}
+knitr::knit_hooks$set(inline = inline_hook)
+```
+
+## Hand-In Homework #2
+
+```{r data, include=FALSE}
+# Read in data 
+dalmatian <- read_csv("dalmatian.csv")
+epa_tccb <- read_csv("EPAtccb.csv")
+```
+
+```{r tire_variables, include=FALSE}
+# Set Constants for the Questions
+mean_tire = 32000
+std_tire = 2500
+qnorm(.04, mean_tire, std_tire)
+```
+
+### 1 - Problem #54, pg. 156
+
+A tire manufacturer believes that the tread life of its snow tires can be described by a Normal model with a mean of 32,000 miles and a standard deviation of 2,500 miles. 
+
+  a) If you buy one of these tires, would it be reasonable for you to hope it will last 40,000 miles? Explain.
+  
+  No, it would be totally unreasonable for you to hope that the tires will last 40,000 miles because only about `r percent(1- pnorm(40000, mean_tire, std_tire), accuracy = 0.1)` tires will last until 40,000 miles of use. 
+    
+  b) Approximately what fraction of these tires can be expected to last less than 30,000 miles? 
+  
+  According to the Normal model, approximately `r percent(pnorm(30000, mean_tire, std_tire), accuracy = 0.1)` of tires will last less than 30,000 miles. 
+    
+  c) Approximately what fraction of these tires can be expected to last between 30,000 and 35,000 miles? 
+  
+  According to the Normal model, approximately `r percent((pnorm(35000, mean_tire, std_tire) - pnorm(30000, mean_tire, std_tire)), accuracy = 0.1)` of tires would last between 30,000 and 35,000 miles. 
+    
+  d) Estimate the IQR of the tread lives. 
+  
+  The IQR of the tire's tread life is approximately `r round(qnorm(.75, mean_tire, std_tire) - qnorm(.25, mean_tire, std_tire), 1)` miles which is from `r qnorm(.75, mean_tire, std_tire)` - `r qnorm(.25, mean_tire, std_tire)`. 
+    
+  e) In planning a marketing strategy, a local tire dealer wants to offer a refund to any customer whose tires fail to last a certain number of miles. However, the dealer does not want to take too big a risk. If the dealer is willing to give refunds to no more than 1 of every 25 customers, for what mileage can he guarantee these tires to last? 
+
+  If the local tire dealer wants to refund no more than 1 of every 25 customers, the tire mileage must be guaranteed to at a minimum `r qnorm(.04, mean_tire, std_tire)` miles. 
+
+
+### 2 - Hearing Impairment in Dalmatian Dogs
+The relationship between eye color and degree of impairment: deaf, unilateral hearing (one ear), bilateral hearing (both ears). 
+
+#### Two-Way Table of the counts with marginal totals
+``` {r dalmatian_TwoWayTable}
+# Create two-way table of dalmatian tibble 
+dal_table = addmargins(xtabs(Count~Hearing+EyeColor,data=dalmatian))
+dal_table
+```
+
+#### A two-way table showing the conditional distribution of the hearing variable given each eye color.
+``` {r dalmatian_TwoWayConditional}
+# Conditional distribution of hearing variable given each eye color 
+dal_condit = round(prop.table(xtabs(Count~Hearing+EyeColor,data=dalmatian),2),3)
+dal_condit
+```
+
+#### Segmented bar chart comparing the conditional distributions in the previous table.
+``` {r dalmatian_SegmentedBarChart}
+# Segmented bar chart
+ggplot(dalmatian,aes(x=EyeColor,y=Count,fill=Hearing)) + 
+  geom_col(position="fill") +
+  # Change the Y-axis to percentage
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
+  ylab("Proportion") + 
+  # Change Fill colors 
+  scale_fill_manual(values = c("darkslategray3", "cadetblue", "darkslategrey")) +
+  # Theme
+  theme(
+    # hide panel borders and remove grid lines
+    panel.background = element_rect(fill = "white"),
+    panel.border = element_blank(), 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    # change axis titles 
+    axis.line = element_line(color = "black"),
+    axis.title = element_text(size=9),
+    # Change the title orientation 
+    plot.title = element_text(hjust = 0.5)
+  )
+``` 
+
+#### Association between Hearing and Eye Color within Dalmatians
+
+Generally, Dalmatians with blue eyes, the greater the incidence of unilateral hearing and deafness. In the Dalmatians with blue eyes, 32.3% have unilateral hearing and 18.4% are deaf compared to 20.7% and 6.8% respectively for those with blue eyes. 

@@ -126,32 +126,3 @@ boxplot
 ```
 
 The continent that tended to have the largest growth rate is Africa and Europe had tended to have the lowest. Africa's estimated growth rates contained a lot of variation and South America had the least variation in the growth rate. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
