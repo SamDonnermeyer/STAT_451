@@ -1,0 +1,232 @@
+---
+title: "Donnermeyer_Homework_3"
+author: "Sam Donnermeyer"
+date: "9/25/2020"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, warning=FALSE, message=FALSE)
+```
+
+```{r packages, include=FALSE}
+# Packages Required
+packages <- c("tidyverse", "ggplot2") 
+
+# Installs missing packages
+if ( length(missing_pkgs <- setdiff(packages, rownames(installed.packages())) > 0)) { 
+  message("installing missing package(s): ", paste(missing_pkgs, collapse = ", ")) 
+  install.packages(missing_pkgs)
+}
+
+# Attaches packages to project 
+require(ggplot2)
+require(tidyverse)
+```
+
+## Hand-In Homework #3
+
+```{r read data, include = TRUE}
+# Read in data files 
+cranes_df = read_csv("Cranes.csv")
+
+# Create data 
+waggle_df = tibble("Distance" = c(200, 250, 500, 950, 1950, 3500, 4300), "Duration" = c(.40, .45, .95, 1.30, 2.00, 3.10, 4.10))
+```
+
+### Problem 1: Honeybee Waggle Dance
+
+***
+#### **(a)** Create an appropriate scatterplot.
+
+```{r scatterplot}
+# Create Scatterplot
+ggplot(waggle_df, aes(x=Duration, y=Distance)) + 
+  geom_point() +
+  ggtitle("Honeybee's 'Waggle Dance' in Duration to Distance") +
+  xlab("Duration (Seconds)") + 
+  ylab("Distance (Meters)") +
+  # Themes
+  scale_colour_viridis_d() + 
+  # Theme
+  theme(
+    # hide panel borders and remove grid lines
+    panel.background = element_rect(fill = "white"),
+    panel.border = element_blank(), 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    # change axis titles 
+    axis.line = element_line(color = "black"),
+    axis.title = element_text(size=11),
+    # Change the title orientation 
+    plot.title = element_text(hjust = 0.5)
+  )
+```
+
+There is a strong positive linear relationship between a Honeybee's 'Waggle Dance' duration and the distance from the food source.
+
+***
+#### **(b)** Report the correlation coefficient between duration and distance.
+
+The correlation between the duration of the 'Waggle Dance' and the distance from the food source is: `r format(round(cor(waggle_df$Duration,waggle_df$Distance), 3), nsmall = 3)`
+
+***
+#### **(c)** Find the equation of the least squares line and write the equation using variable names.
+
+```{r regression model}
+m <- lm(Distance ~ Duration, data=waggle_df)
+sm <- summary(m)
+sm
+```
+
+$$ \widehat {Distance} = `r format(round(coef(m)[1], 3), nsmall = 3)` + `r coef(m)[2]`\,(Duration) $$
+
+***
+#### **(d)** Create a residual plot and a histogram of the residuals (side-by-side). Does it appear there are any problems using a linear model?
+
+```{r Residuals, fig.show='hold', out.width='50%'}
+ggplot(waggle_df,aes(x=Duration,y=resid(m))) + 
+  geom_point() + 
+  geom_hline(yintercept=0) + 
+  ggtitle("Residual Plot") +
+  xlab("Duration (Seconds)") +
+  ylab("Distance (Meters)") +
+  # Themes
+  scale_colour_viridis_d() + 
+  # Theme
+  theme(
+    # hide panel borders and remove grid lines
+    panel.background = element_rect(fill = "white"),
+    panel.border = element_blank(), 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    # change axis titles 
+    axis.line = element_line(color = "black"),
+    axis.title = element_text(size=9),
+    # Change the title orientation 
+    plot.title = element_text(hjust = 0.5)
+  )
+
+ggplot(NULL,aes(x=resid(m))) + 
+  geom_histogram(binwidth=100) +
+  ggtitle("Histogram of Residuals") +
+  xlab("Residuals") + 
+  ylab("Count") + 
+  # Themes
+  scale_colour_viridis_d() + 
+  # Theme
+  theme(
+    # hide panel borders and remove grid lines
+    panel.background = element_rect(fill = "white"),
+    panel.border = element_blank(), 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    # change axis titles 
+    axis.line = element_line(color = "black"),
+    axis.title = element_text(size=11),
+    # Change the title orientation 
+    plot.title = element_text(hjust = 0.5)
+  )
+```
+
+The linear model is appropriate to be used with these data, the model is not overfitted and the residuals are evenly distributed. 
+
+***
+#### **(e)** Interpret the slope of the regression line. (coef(m)[2]) in the context of the problem.
+
+The slope of the regression line fit to these data predicts that for every additional second elapsed in a honeybee's Waggle Dance, the distance from the food source would increase by `r coef(m)[2]` meters.
+
+***
+#### **(d)** Report and interpret the values of $R^2$ and $s_e$. 
+
+The $R^2$ value represents the variation accounted for by the model. $R^2$: `r format(round((cor(waggle_df$Duration,waggle_df$Distance) ** 2), 3), nsmall = 3)`. This means that `r format((round((cor(waggle_df$Duration,waggle_df$Distance) ** 2), 3)*100), nsmall = 1)`% of variation in the distance from the food source is explained by the duration of the Bee's Waggle Dance. 
+
+The $s_e$ value is `r format(round(sm$sigma, 3), nsmall = 3)` which indicates that the predictions from this model are expected to be off by about `r format(round(sm$sigma, 3), nsmall = 3)` meters on average of Bee's Waggle Dances from the same population.
+
+***
+***
+
+### Problem 2: Whooping Cranes
+
+***
+#### **(a)** Plot count vs. year (include the plot). With regularly spaced data over time.
+
+```{r Crane Scatterplot}
+ggplot(cranes_df, aes(x=cranes_df$Year, y=cranes_df$Count)) + 
+  geom_point() + 
+  geom_line() +
+  ggtitle("Number of Whooping Cranes per Year in Aransas National Wildlife Refuge") +
+  xlab("Year") + 
+  ylab("Count of Whooping Cranes") + 
+  # Change Axis Frequency 
+  scale_y_continuous(limits = c(0, 300)) +
+  # Themes
+  scale_colour_viridis_d() + 
+  # Theme
+  theme(
+    # hide panel borders and remove grid lines
+    panel.background = element_rect(fill = "white"),
+    panel.border = element_blank(), 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    # change axis titles 
+    axis.line = element_line(color = "black"),
+    axis.title = element_text(size=11),
+    # Change the title orientation 
+    plot.title = element_text(hjust = 0.5)
+  )
+```
+
+***
+#### **(b)** Plot log10 of count vs. year (include the plot).
+
+```{r Log Crane Scatterplot}
+ggplot(cranes_df, aes(x=cranes_df$Year, y=log10(cranes_df$Count))) + 
+  geom_point() + 
+  geom_line() +
+  ggtitle("Number of Whooping Cranes per Year in Aransas National Wildlife Refuge") +
+  xlab("Year") + 
+  ylab("Log Count of Whooping Cranes") + 
+  # Change Axis Frequency 
+  scale_y_continuous(limits = c(0, 2.5)) +
+  # Themes
+  scale_colour_viridis_d() + 
+  # Theme
+  theme(
+    # hide panel borders and remove grid lines
+    panel.background = element_rect(fill = "white"),
+    panel.border = element_blank(), 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    # change axis titles 
+    axis.line = element_line(color = "black"),
+    axis.title = element_text(size=11),
+    # Change the title orientation 
+    plot.title = element_text(hjust = 0.5)
+  )
+```
+
+***
+#### **(c)** Fit the linear model for predicting log10(Count) from year. Report only the intercept and slope of the model.
+
+```{r Crane Linear Model}
+# Create Linear model for prediction log10(Count) from year
+c_m <- lm(log10(Count) ~ Year, data=cranes_df)
+c_sm <- summary(c_m)
+```
+The intercept of the linear regression model is `r round(coef(c_m)[1], 3)`, where the coefficient is `r round(coef(c_m)[2], 3)`. The predicted Whooping Crane population in the Aransas National Wildlife Refuge in Texas would increase by `r 100*(10^(coef(c_m)[2]) - 1)`% for every additional year. 
+
+The equation of the linear regression model is as follows.
+$$ \widehat {Log_{10}(Count-of-Whooping-Cranes)} = `r format(round(coef(c_m)[1], 3), nsmall = 3)` + `r round(coef(c_m)[2], 3)`\,(Year) $$
+
+***
+#### **(d)** What’s the predicted number of cranes from your model for 2020 and 2050?
+
+The predicted number of Whooping Cranes in the Aransas National Wildlife Refuge for the following years would be: 
+
++ 2020: `r round(10^(coef(c_m)[1] + (coef(c_m)[2] * 2020)),3)` Whooping Cranes
+
++ 2050: `r round(10^(coef(c_m)[1] + (coef(c_m)[2] * 2050)),3)` Whooping Cranes
+
+
+
