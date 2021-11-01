@@ -1,0 +1,103 @@
+---
+title: "Donnermeyer_Homework_1"
+author: "Sam Donnermeyer"
+date: "8/27/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Load Packages
+library(tidyverse)
+library(ggplot2)
+library(ggeasy)
+library(hrbrthemes)
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Hand-In Homework #1
+
+```{r cars}
+growth_rates <- read_csv("GrowthRates.csv")
+head(growth_rates, 3)
+```
+
+### Create Histogram and Density Plot
+Create charts side-by-side.
+
+```{r pressure, echo=FALSE, fig.show='hold', out.width = '50%'}
+
+# Create Histogram of Rate2015to20
+histogram_plot = ggplot(growth_rates, aes(Rate2015to20)) +
+  geom_histogram(binwidth = 3) + 
+  # Add x label
+  xlab("Estimated Population Growth Rate 2015-2020") +
+  # add y label
+  ylab("Count of Nations") +
+  # Add title to the chart
+  ggtitle("Estimated Growth Rates during 2015 - 2020") +
+  # Theme
+  scale_colour_viridis_d() +
+  #theme_update(plot.title = element_text(hjust = 0.5)) +
+  theme_minimal()
+
+# Create Density plot of Rate2015to20
+density_plot = ggplot(growth_rates, aes(Rate2015to20)) + 
+  # Density plot 
+  geom_density(color = "black", fill = "light grey", alpha = .2) +
+  # Add x label 
+  xlab("Estimated Population Growth Rate 2015-2020") +
+  # Add y label
+  ylab("Proportion of Nations") +
+  # Add title to the chart
+  ggtitle("Estimated Growth Rates during 2015 - 2020") +
+  # Themes
+  scale_colour_viridis_d() +
+  theme_ipsum()
+
+#density_plot + scale_colour_viridis_d() + 
+#  theme_minimal()
+
+histogram_plot
+density_plot
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

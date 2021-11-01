@@ -1,0 +1,65 @@
+---
+title: "Chapter_5&6_Worksheet"
+author: "Sam Donnermeyer"
+date: "9/9/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(scales)
+
+mean = 8.2
+stdev = .2
+
+data_x = c(1, 2, 3, 4, 5)
+data_y = c(1, 6, 5, 3, 8)
+data_set = cbind(data_x, data_y)
+```
+
+### Worksheet for Chapter 5 & 6
+
+#### Chapter 5: Normal Model
+
+1. Potato chips are sold in bags labeled 8 ounces but the actual net weight varies somewhat from bag to bag. The distribution of actual weights follows a normal distribution with mean 8.2 ounces and standard deviation 0.2 ounces.
+
+a) What proportion of bags weigh less than the claimed weight? 
+`r percent(pnorm(8, mean, stdev), accuracy = .1)` or 16%
+
+b) What percentile is 8.4 ounces? 
+`r percent(pnorm(8.4, mean, stdev), accuracy = .1)` or 84%
+
+c) The manufacturer would like to adjust the filling process so that only 2.5% of bags weigh less than 8 ounces. One way to achieve this is to adjust the filling process so that the mean weight of the bags is higher. To what value should the manufacturer set the mean to achieve this goal if the standard deviation remains the same?
+8.4 ounces
+
+d) An alternative way to achieve the 2.5% goal is to reduce the standard deviation of the bag weights while keeping the mean weight at 8.2 ounces. To what value should the manufacturer set the standard deviation to achieve this goal?
+The value should be set to .1 ounce. (Standard deviation divided in half)
+
+e) Which of c) or d) is preferable in the view of the manufacturer? Do you think adjusting the mean and standard deviation of the filling process are equally easy?
+Adjusting the mean would be preferable, because when you refine the standard deviation, it owuld require more precision, rather than just increasing the amount being put into the bag without adjusting the quality of the process. 
+
+
+#### Chapter 6: Correlation
+
+2. If mothers were always 2 years younger than the fathers of their children, what would the
+correlation between the ages of mother and father be?
+The correlation would be 1. 
+
+3. Compute Kendall’s tau for this data set with 5 cases:
+x y
+1 1
+2 6
+3 5
+4 3
+5 8
+
+
+```{r kendall}
+cor.test(data_x, data_y, method="kendall")
+
+```
+
+
+
+

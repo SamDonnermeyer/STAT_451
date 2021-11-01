@@ -1,0 +1,234 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Donnermeyer\_Homework\_5},
+            pdfauthor={Sam Donnermeyer},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx}
+% grffile has become a legacy package: https://ctan.org/pkg/grffile
+\IfFileExists{grffile.sty}{%
+\usepackage{grffile}
+}{}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Donnermeyer\_Homework\_5}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Sam Donnermeyer}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{10/9/2020}
+
+
+\begin{document}
+\maketitle
+
+\hypertarget{hand-in-homework-4}{%
+\subsection{Hand In Homework \#4}\label{hand-in-homework-4}}
+
+\hypertarget{problem-1-sampling-problems-questions-2-3}{%
+\subsubsection{Problem \#1: Sampling Problems (Questions 2 \&
+3)}\label{problem-1-sampling-problems-questions-2-3}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{section}{%
+\paragraph{\texorpdfstring{\textbf{(2)}}{(2)}}\label{section}}
+
+A researcher wishes to estimate the total number of users of a trail
+head over the course of 15 weeks. She randomly selects 3 Mondays, 3
+Tuesdays, 3 Wednesdays, 3 Thursdays, 3 Fridays, 5 Saturdays and 5
+Sundays from the whole 15-week period and stations an observer there on
+each selected day. The observer records the number of trail users for
+the day.
+
+Population: - All users of a the trail head over the course of the given
+15 weeks.
+
+Sampling Units: - Trail users (people).
+
+Sampling Plan: - Multistage - Stratified Random Sampling (To Identify
+which days to select) -\textgreater{} Cluster Sampling (Sample All Trail
+Users that Day)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{section-1}{%
+\paragraph{\texorpdfstring{\textbf{(3)}}{(3)}}\label{section-1}}
+
+In the previous problem, the researcher would also like to estimate the
+proportion of trail users who are from out of state. The observer also
+records where each trail user is from.
+
+Population: - All users of the trail head over the course of the given
+15 weeks who are from out of state.
+
+Sampling Units: - Trail users (people).
+
+Sampling Plan: - Multistage - Stratified Random Sampling (To Identify
+which days to select) -\textgreater{} Cluster Sampling (Sample All Trail
+Users that Day)
+
+\hypertarget{problem-2-part-iii-review-exercises-pp.-373-378-r.3.10-r.3.12-r.3.16-r.3.28-r.3.32}{%
+\subsubsection{Problem \#2: Part III Review Exercises (pp.~373-378):
+R.3.10, R.3.12, R.3.16, R.3.28,
+R.3.32}\label{problem-2-part-iii-review-exercises-pp.-373-378-r.3.10-r.3.12-r.3.16-r.3.28-r.3.32}}
+
+Analyze the design of each research example reported. Is it a sample
+survey, an observational study, or an experiment? If a sample, what are
+the population, the parameter of interest, and the sampling procedure?
+If an observational study, was it retrospective or prospective? If an
+experiment, describe the factors, treatments, randomization, response
+variable, and any blocking, matching, or blinding that may be present.
+In each, what kind of conclusions can be reached?
+
+\hypertarget{r.3.10}{%
+\paragraph{R.3.10}\label{r.3.10}}
+
+The study detailed in the problem is a retrospective observational study
+because the men who had prostate cancer were identified through an
+existing cancer registry. There seems to be strong evidence that men who
+have vasectomies is connected to developing prostate cancer.
+
+\hypertarget{r.3.12}{%
+\paragraph{R.3.12}\label{r.3.12}}
+
+This is an experiment with the factors, glaze and the temperatures the
+pottery was baked at. The different treatments available are the four
+types of glazes and the three different temperature settings in the
+kiln. There was no randomization included in this experiment. The
+response variable is the `appearance of age' in the newly made pottery.
+There was no blocking, matching, or blinding present in the experiment.
+Based on the results of the experiment, the potter can determine which
+combination of factors and treatments creates pottery that appears to be
+aged.
+
+\hypertarget{r.3.16}{%
+\paragraph{R.3.16}\label{r.3.16}}
+
+The scenario detailed is a sample survey, where the population is all
+soda bottles produced by the soft-drink manufacturer and the parameter
+of interest is strength of the caps on the newly bottled soda.
+
+\hypertarget{r.3.28}{%
+\paragraph{R.3.28}\label{r.3.28}}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  The factors are the cooking times (levels: 10 \& 15 minutes),
+  different cooking temperatures (levels: 325, 375, and 425 degrees F),
+  and the amount of chocolate chips in each cookie (levels: 5 or 10).
+\item
+  Blinding in the context of this experiment means the evaluators (the
+  six friends) are unaware of the different levels in each of the
+  factors in order to prevent any bias from entering the evaluation. It
+  is not double blinded because Mary Beth, NIgel, and Molly know what
+  types of cookies they are servering and have made in order to evaluate
+  them properly after the six friends give their feedback.
+\item
+  Each judge will taste 12 different cookies in order to be exposed to
+  all levels of each factor.
+\item
+  The response variable will be ordinal, to show the order in which the
+  judges deem the cookies to be in, to rank the cookies from from best
+  to worse.
+\item
+  The challenges of the experiment is the resources to make 72 cookies
+  (12 for each judge) and carry out the processes correctly and
+  consistently, essentially the reproducability of each type of cookie.
+  Secondly, the judge's might not be able to differentiate between the
+  cookies enough to give any meaningful information regarding the best
+  cookie combination.
+\end{enumerate}
+
+\hypertarget{r.3.32}{%
+\paragraph{R.3.32}\label{r.3.32}}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  This is an experiment which has a block, which is the sex of the
+  volunteer.
+\item
+  No, the experiment is to resolve the effectiveness of the treatment
+  among those who suffer from reflux disease, and since all volunteers
+  are suffering from reflux disease, the experiment can determine if the
+  treatment aids the reflux disease.
+\item
+  The use of a placebo would make the volunteers blind to the treatment
+  that they are receiving. This would allow for the results from the
+  antacid to be vetted.
+\end{enumerate}
+
+
+\end{document}

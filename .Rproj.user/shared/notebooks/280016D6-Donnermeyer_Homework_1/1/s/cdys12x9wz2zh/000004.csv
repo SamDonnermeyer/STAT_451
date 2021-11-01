@@ -1,0 +1,12 @@
+"0","growth_rates <- read_csv(""GrowthRates.csv"")"
+"2","Parsed with column specification:
+cols(
+  Country = [31mcol_character()[39m,
+  Pop2020 = [32mcol_double()[39m,
+  Rate2020 = [32mcol_double()[39m,
+  Rate2015to20 = [32mcol_double()[39m,
+  Rate1950to2020 = [32mcol_double()[39m,
+  Continent = [31mcol_character()[39m
+)
+"
+"0","head(growth_rates, 3)"

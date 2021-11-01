@@ -1,0 +1,9 @@
+"0","# Load Packages"
+"0","library(tidyverse)"
+"0","library(ggplot2)"
+"0","library(ggeasy)"
+"0","library(hrbrthemes)"
+"2","package ‘hrbrthemes’ was built under R version 3.5.2"
+"2","Error: package or namespace load failed for ‘hrbrthemes’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ there is no package called ‘gdtools’
+"

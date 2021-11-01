@@ -1,0 +1,53 @@
+---
+title: "Donnermeyer_Homework_6"
+author: "Sam Donnermeyer"
+date: "10/26/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+## Hand In Homework #6
+
+
+### Problem #1: Society of Obstetricians and Gynaecologists of Canada, "Parental Screening, Diagnosis, and Pregnancy Management of Fetal Neural Tube Defects." 
+
+***
+#### (a) 
+For prevalence of 1 in 300, calculate PPV and NPV in the best case scenario (detects 90% of NTDs with FPR of 1%).
+
+
+***
+#### (b) 
+For prevalence of 1 in 300, calculate PPV and NPV in the worst case scenario (detects 71% of NTDs with FPR of 3%).
+
+
+In both cases, show how you arrived at your answers with either a tree diagram with appropriate values or a formula. Round final answers to 4 decimal places. Do not round intermediate
+calculations. For example, 1 in 300 is not .0033.
+
+### Problem #3: Part IV Review Excerises (pg. 469-474) 
+
+***
+#### R4.12
+
+
+***
+#### R4.14
+
+
+***
+#### R4.28
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,236 @@
+Country,Pop2020,Rate2020,Rate2015to20,Rate1950to2020,Continent
+Niger,24206644,3.84,21.02,845.68,Africa
+Bahrain,1701575,3.68,24.03,1371.81,Asia
+Equatorial Guinea,1402985,3.47,20.06,522.06,Africa
+Uganda,45741007,3.32,19.66,786.76,Africa
+Angola,32866272,3.27,17.87,622.65,Africa
+Democratic Republic of the Congo,89561403,3.19,17.47,635.09,Africa
+Burundi,11890784,3.12,17.03,414.99,Africa
+Falkland Islands (Malvinas),3480,3.05,22.79,54.05,South America
+Mali,20250833,3.02,16.13,330.10,Africa
+Chad,16425864,3.00,16.40,556.43,Africa
+United Republic of Tanzania,59734218,2.98,16.03,680.86,Africa
+Gambia,2416668,2.94,15.86,692.64,Africa
+Mozambique,31255435,2.93,15.58,424.51,Africa
+Zambia,18383955,2.93,15.77,695.69,Africa
+Somalia,15893222,2.92,15.19,601.97,Africa
+Burkina Faso,20903273,2.86,15.42,387.89,Africa
+Guinea,13132795,2.83,14.88,335.88,Africa
+Senegal,16743927,2.75,14.85,573.36,Africa
+Mauritania,4649658,2.74,14.91,613.76,Africa
+Benin,12123200,2.73,14.63,437.56,Africa
+French Guiana,298682,2.70,14.44,1072.59,South America
+Malawi,19129952,2.69,14.24,547.62,Africa
+Madagascar,27691018,2.68,14.26,578.11,Africa
+Oman,5106626,2.65,19.67,1018.85,Asia
+Cameroon,26545863,2.59,13.94,516.34,Africa
+Rwanda,12952218,2.58,13.93,492.46,Africa
+Nigeria,206139589,2.58,13.80,444.48,Africa
+Ethiopia,114963588,2.57,14.01,534.18,Africa
+Côte d'Ivoire,26378274,2.57,13.57,902.92,Africa
+Congo,5518087,2.56,13.63,567.04,Africa
+Western Sahara,597339,2.55,13.52,4239.23,Africa
+Solomon Islands,686884,2.55,13.89,664.96,Oceania
+Syrian Arab Republic,17500658,2.52,-2.76,412.71,Asia
+Mayotte,272815,2.50,13.66,1701.83,Africa
+Guinea-Bissau,1968001,2.45,13.29,267.56,Africa
+Gabon,2225734,2.45,14.28,370.26,Africa
+Liberia,5057681,2.44,13.09,443.82,Africa
+Togo,8278724,2.43,13.05,493.26,Africa
+Vanuatu,307145,2.42,13.28,543.95,Oceania
+Sudan,43849260,2.42,12.71,664.75,Africa
+State of Palestine,5101414,2.41,12.63,447.40,Asia
+Afghanistan,38928346,2.33,13.12,402.16,Asia
+Tajikistan,9537645,2.32,12.82,522.76,Asia
+Iraq,40222493,2.32,13.07,603.29,Asia
+Kenya,53771296,2.28,12.31,784.87,Africa
+Yemen,29825964,2.28,12.56,539.87,Asia
+Comoros,869601,2.20,11.86,445.34,Africa
+Ghana,31072940,2.15,11.58,517.00,Africa
+Sierra Leone,7976983,2.10,11.23,290.80,Africa
+Botswana,2351627,2.08,10.89,470.05,Africa
+Pakistan,220892340,2.00,10.76,488.38,Asia
+Timor-Leste,1318445,1.96,10.21,217.88,Asia
+Papua New Guinea,8947024,1.95,10.35,346.87,Oceania
+Egypt,102334404,1.94,10.70,400.36,Africa
+Sao Tome and Principe,219159,1.91,9.89,265.25,Africa
+Guatemala,17915568,1.90,10.23,475.15,North America
+Belize,397628,1.86,10.17,476.95,North America
+Namibia,2540905,1.86,9.76,393.97,Africa
+Algeria,43851044,1.85,10.38,394.25,Africa
+Nepal,29136808,1.85,7.85,243.46,Asia
+Maldives,540544,1.81,18.82,633.32,Asia
+Central African Republic,4829767,1.78,7.49,264.06,Africa
+Saint-Martin (French part),38666,1.75,7.83,1187.58,North America
+Qatar,2881053,1.73,12.29,11422.83,Asia
+Kyrgyzstan,6524195,1.69,9.48,274.95,Asia
+Luxembourg,625978,1.66,10.45,111.48,Europe
+Mongolia,3278290,1.65,9.33,320.19,Asia
+Honduras,9904607,1.63,8.69,540.36,North America
+Panama,4314767,1.61,8.73,401.92,North America
+Israel,8655535,1.60,8.49,588.06,Asia
+Saudi Arabia,34813871,1.59,9.76,1015.35,Asia
+Kiribati,119449,1.57,7.68,261.44,Oceania
+Ecuador,17643054,1.55,8.83,408.42,South America
+Kuwait,4270571,1.51,11.34,2689.44,Asia
+Turkmenistan,6031200,1.50,8.37,398.04,Asia
+Zimbabwe,14862924,1.48,7.59,441.09,Africa
+Djibouti,988000,1.48,8.10,1493.52,Africa
+Lao People's Democratic Republic,7275560,1.48,7.93,332.32,Asia
+Uzbekistan,33469203,1.48,8.21,434.31,Asia
+Peru,32971854,1.42,8.21,323.94,South America
+Eritrea,3546421,1.41,6.09,331.25,Africa
+Cambodia,16718965,1.41,7.72,277.17,Asia
+Bolivia (Plurinational State of),11673021,1.39,7.39,278.77,South America
+"China, Macao SAR",649335,1.39,7.85,230.48,Asia
+Libya,6871292,1.38,7.06,511.04,Africa
+Turks and Caicos Islands,38717,1.38,7.60,666.52,North America
+Philippines,109581078,1.35,7.31,489.76,Asia
+Malaysia,32365999,1.30,6.92,429.73,Asia
+Iran (Islamic Republic of),83992949,1.30,7.01,390.63,Asia
+South Africa,59308690,1.28,7.08,335.18,Africa
+Tokelau,1357,1.27,8.39,-13.35,Oceania
+Tuvalu,11792,1.25,6.24,152.34,Oceania
+Paraguay,7132538,1.25,6.63,384.14,South America
+Haiti,11402528,1.24,6.61,253.97,North America
+United Arab Emirates,9890402,1.23,6.77,14112.80,Asia
+Kazakhstan,18776707,1.21,6.86,180.12,Asia
+Nicaragua,6624554,1.21,6.45,411.55,North America
+Morocco,36910560,1.20,6.48,310.76,Africa
+Cayman Islands,65722,1.19,6.48,924.19,North America
+South Sudan,11193725,1.19,4.46,350.94,Africa
+Australia,25499884,1.18,6.55,211.84,Oceania
+Sint Maarten (Dutch part),42876,1.15,7.28,2760.31,North America
+Tonga,105695,1.15,4.88,123.84,Oceania
+Ireland,4937786,1.13,6.13,69.53,Europe
+Bhutan,771608,1.12,6.01,336.44,Asia
+Cabo Verde,555987,1.10,5.95,212.24,Africa
+Turkey,84339067,1.09,7.40,293.95,Asia
+Colombia,50882891,1.08,7.08,324.68,South America
+Indonesia,273523615,1.07,5.86,293.31,Asia
+Mexico,128932753,1.06,5.81,361.39,North America
+Micronesia (Fed. States of),115023,1.06,5.63,259.44,Oceania
+Tunisia,11818619,1.06,5.71,227.81,Africa
+Eswatini,1160164,1.05,5.08,324.96,Africa
+Dominican Republic,10847910,1.01,5.51,358.75,North America
+Bangladesh,164689383,1.01,5.40,334.60,Asia
+Jordan,10203134,1.00,10.11,2019.82,Asia
+India,1380004385,0.99,5.33,266.71,Asia
+New Caledonia,285498,0.97,5.32,340.41,Oceania
+Brunei Darussalam,437479,0.97,5.44,811.40,Asia
+Bahamas,393244,0.97,5.09,397.19,North America
+"Bonaire, Sint Eustatius and Saba",26223,0.94,6.73,268.20,North America
+Channel Islands,173863,0.93,5.13,70.06,Europe
+Argentina,45195774,0.93,4.92,165.27,South America
+Costa Rica,5094118,0.92,5.08,438.66,North America
+Azerbaijan,10139177,0.91,5.37,246.29,Asia
+Viet Nam,97338579,0.91,5.03,292.34,Asia
+Suriname,586632,0.90,4.92,172.85,South America
+Anguilla,15003,0.90,5.07,193.14,North America
+Guam,168775,0.89,4.28,182.94,Oceania
+Canada,37742154,0.89,4.76,174.82,North America
+Chile,19116201,0.87,6.38,189.70,South America
+Antigua and Barbuda,97929,0.84,4.66,115.14,North America
+New Zealand,4822233,0.82,4.50,152.74,Oceania
+"China, Hong Kong SAR",7496981,0.82,4.33,279.79,Asia
+Lesotho,2142249,0.80,4.04,204.00,Africa
+Singapore,5850342,0.79,4.62,472.39,Asia
+Norway,5421241,0.79,4.26,66.03,Europe
+Switzerland,8654622,0.74,4.31,85.40,Europe
+Cyprus,1207359,0.73,3.99,144.40,Asia
+Fiji,896445,0.73,3.20,210.20,Oceania
+Réunion,895312,0.72,3.70,260.85,Africa
+Brazil,212559417,0.72,3.96,293.81,South America
+Monaco,39242,0.71,4.04,96.25,Europe
+Saint Kitts and Nevis,53199,0.71,3.90,15.53,North America
+Niue,1626,0.68,0.43,-65.16,Oceania
+Marshall Islands,59190,0.68,3.05,355.27,Oceania
+Myanmar,54409800,0.67,3.28,206.02,Asia
+British Virgin Islands,30231,0.67,3.70,306.33,North America
+Samoa,198414,0.67,2.53,141.68,Oceania
+Iceland,341243,0.65,3.33,139.20,Europe
+Nauru,10824,0.63,4.25,216.12,Oceania
+Sweden,10099265,0.63,3.42,44.07,Europe
+Seychelles,98347,0.62,3.55,170.74,Africa
+Northern Mariana Islands,57559,0.60,3.19,722.39,Oceania
+United States of America,331002651,0.59,3.16,108.43,North America
+French Polynesia,280908,0.58,2.85,366.11,Oceania
+Austria,9006398,0.57,3.78,29.84,Europe
+Isle of Man,85033,0.53,2.16,53.89,Europe
+United Kingdom,67886011,0.53,3.08,34.12,Europe
+El Salvador,6486205,0.51,2.55,194.84,North America
+Guyana,786552,0.48,2.49,93.47,South America
+Palau,18094,0.48,2.43,143.17,Oceania
+Grenada,112523,0.46,2.67,46.74,North America
+Saint Lucia,183627,0.46,2.51,121.81,North America
+Dem. People's Republic of Korea,25778816,0.44,2.36,144.36,Asia
+Jamaica,2961167,0.44,2.43,111.07,North America
+Belgium,11589623,0.44,2.67,34.18,Europe
+Aruba,106766,0.43,2.32,180.46,North America
+Sri Lanka,21413249,0.42,2.42,168.64,Asia
+Curaçao,164093,0.41,2.66,63.80,North America
+China,1439323776,0.39,2.31,159.61,Asia
+Faroe Islands,48863,0.38,1.69,55.11,Europe
+Denmark,5792202,0.35,1.82,35.70,Europe
+Uruguay,3473730,0.35,1.81,55.18,South America
+Trinidad and Tobago,1399488,0.32,2.13,116.76,North America
+Germany,83783942,0.32,2.44,19.75,Europe
+Saint Vincent and the Grenadines,110940,0.32,1.64,65.59,North America
+Saint-Barthélemy,9877,0.30,1.90,393.36,North America
+Saint Helena,6077,0.30,3.61,15.84,Africa
+Liechtenstein,38128,0.29,1.76,177.13,Europe
+Malta,441543,0.27,1.84,41.52,Europe
+Thailand,69799978,0.25,1.58,237.03,Asia
+Holy See,801,0.25,-0.25,-11.78,Europe
+Dominica,71986,0.25,1.13,40.87,North America
+France,65273511,0.22,1.27,56.03,Europe
+Netherlands,17134872,0.22,1.16,70.63,Europe
+San Marino,33931,0.21,1.98,165.48,Europe
+Armenia,2963243,0.19,1.29,118.93,Asia
+Czechia,10708981,0.18,1.01,20.29,Europe
+"China, Taiwan Province of China",23816775,0.18,1.10,213.28,Asia
+Greenland,56770,0.17,0.70,146.87,North America
+Mauritius,1271768,0.17,0.98,157.83,Africa
+Andorra,77265,0.16,-0.96,1147.01,Europe
+Finland,5540720,0.15,1.09,38.23,Europe
+Barbados,287375,0.12,0.72,36.20,North America
+Cook Islands,17564,0.09,-0.13,16.50,Oceania
+Republic of Korea,51269185,0.09,0.88,166.87,Asia
+Estonia,1326535,0.07,0.85,20.49,Europe
+Montserrat,4992,0.06,0.50,-63.07,North America
+Slovakia,5459642,0.05,0.44,58.87,Europe
+Russian Federation,145934462,0.04,0.65,41.96,Europe
+Spain,46754778,0.04,0.18,66.57,Europe
+Guadeloupe,400124,0.02,-0.03,90.53,North America
+Slovenia,2078938,0.01,0.37,41.13,Europe
+Montenegro,628066,0.01,0.18,59.11,Europe
+North Macedonia,2083374,0.00,0.19,66.08,Europe
+Gibraltar,33691,-0.03,-0.13,52.87,Europe
+Belarus,9449323,-0.03,0.10,22.01,Europe
+Cuba,11326616,-0.06,0.02,91.33,North America
+Martinique,375265,-0.08,-0.85,69.04,North America
+Albania,2877797,-0.11,-0.44,127.82,Europe
+Poland,37846611,-0.11,-0.49,52.46,Europe
+Italy,60461826,-0.15,-0.19,29.75,Europe
+United States Virgin Islands,104425,-0.15,-0.51,289.69,North America
+Georgia,3989167,-0.19,-0.87,13.10,Asia
+American Samoa,55191,-0.22,-1.11,191.40,Oceania
+Republic of Moldova,4033963,-0.23,-0.90,72.32,Europe
+Hungary,9660351,-0.25,-1.20,3.46,Europe
+Venezuela (Bolivarian Republic of),28435940,-0.28,-5.47,418.72,South America
+Portugal,10196709,-0.29,-1.66,21.14,Europe
+Japan,126476461,-0.30,-1.18,52.75,Asia
+Bermuda,62278,-0.36,-2.22,67.14,North America
+Serbia,8737371,-0.40,-1.57,29.78,Europe
+Lebanon,6825445,-0.44,4.48,411.41,Asia
+Saint Pierre and Miquelon,5794,-0.48,-3.32,26.76,North America
+Greece,10423054,-0.48,-2.22,35.92,Europe
+Ukraine,43733762,-0.59,-2.64,17.26,Europe
+Croatia,4105267,-0.61,-3.01,6.62,Europe
+Bosnia and Herzegovina,3280819,-0.61,-4.33,23.28,Europe
+Romania,19237691,-0.66,-3.45,18.49,Europe
+Bulgaria,6948445,-0.74,-3.49,-4.17,Europe
+Latvia,1886198,-1.08,-5.58,-2.10,Europe
+Lithuania,2722289,-1.35,-7.15,6.03,Europe
+Wallis and Futuna Islands,11239,-1.69,-8.37,60.56,Oceania
+Puerto Rico,2860853,-2.47,-15.40,28.98,North America
